@@ -103,7 +103,7 @@ export default function TimeLine() {
 				console.log("error",error) ;
 			}
 		}
-		fetchDate("post",10) ; 
+		fetchDate("post",20) ; 
 	},[])
 return(
 	<>
@@ -112,12 +112,17 @@ return(
 					<>
 					{
 						TimeLine.map((item)=>
-							<div className="flex flex-col mx-[5%] text-white">
-								<div className="flex items-center justify-between">
-									<div className="flex items-center">
-										<img className="w-profilePicture h-profilePicture rounded-full object-cover object-top border-[.2rem] border-lightBlueSky" src={item.owner.picture} />
-										<div className="flex flex-col">
-											<p>
+							<div className="flex flex-col mx-[5%] text-white mt-[1rem] bg-gray-500 rounded overflow-hidden">
+								<div className="w-full flex flex-col">
+									<div className="flex flex-col"> 
+									<div className="flex flex-col p-[1rem]">
+										<div className="w-full">
+										<div className="miniphone:flex-row flex flex-col miniphone:justify-start justify-center items-center">
+										<div className="w-profilePicture h-profilePicture overflow-hidden rounded-full border-[.15rem] border-lightBlueSky flex items-center justify-center">
+											<img className="max-w-[unset] w-profilePicture h-profilePicture rounded-full" src={item.owner.picture} />
+										</div>
+										<div className="flex flex-col miniphone:ml-[1rem]">
+											<p className="mb-[.2rem] text-md text-center miniphone:text-start">
 												<span>
 													{
 														item.owner.firstName
@@ -129,12 +134,41 @@ return(
 													}
 												</span>
 											</p>
-											<span>
+											<span className="text-sm text-[#9f9fa1]">
 												{
 													dateHandler(item.publishDate)
 												}
 											</span>
 										</div>
+										</div>
+									</div>
+									<div className="mt-[.8rem] flex flex-col miniphone:items-start items-center">
+										<p className="miniphone:ml-[3.85rem] break-all">
+											{
+												item.text
+											}
+										</p>
+										<div className="miniphone:ml-[3.85rem] miniphone:justify-start justify-center flex my-[2rem] flex-wrap">
+											{
+												item.tags.map((tag)=>
+													<p className="mr-[.3rem] mt-[.3rem] px-4 py-1 bg-black rounded-[.3rem] break-all">
+														#{
+															tag
+														}
+													</p>
+												)
+											}
+										</div>
+									</div>
+									</div>
+									<div className="w-full h-[13rem] miniphone:h-[15rem] tablet:h-[17.5rem] minilaptop:h-[20rem] flex">
+										<img className="w-full h-auto max-h-[auto]" src={
+											item.image
+										} />
+									</div>
+									</div>
+									<div className="flex p-[1rem] bg-white">
+
 									</div>
 								</div>
 							</div>
