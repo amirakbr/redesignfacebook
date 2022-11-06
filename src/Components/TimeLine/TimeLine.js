@@ -15,6 +15,63 @@ let getPost = (limit) => {
 }
 getPost(10) ; 
 */
+let monthArray = ['Jan','Feb','Mar','Apr','May','Jun','Jul',
+'Aug','Sep','Oct','Nov','Dec'] ; 
+function dateHandler(entryDate){
+	let startTimeISOString = entryDate;
+	let startTimeDate = new Date(startTimeISOString);
+	let todayDate = new Date() ; 
+	let diffBetWeenDays = Math.floor((todayDate - startTimeDate)/1000) ; 
+	console.log(startTimeDate.getFullYear())
+	//return Math.floor(diffBetWeenDays/(1000)) ; 
+	let finalResult ;
+	if(diffBetWeenDays < 60 ){
+		if(diffBetWeenDays > 1) {
+			finalResult = `Posted ${diffBetWeenDays} Second's ago`
+		}else {
+			finalResult = `Posted ${diffBetWeenDays} Second ago`
+		}
+		
+	}
+	else if(diffBetWeenDays < 3600){
+		if(Math.floor(diffBetWeenDays/60) > 1) {
+			finalResult = `Posted ${Math.floor(diffBetWeenDays/60)} Minuet's  ago`
+		}else{
+			finalResult = `Posted ${Math.floor(diffBetWeenDays/60)} Minuet  ago`
+		}
+	}
+	else if(diffBetWeenDays < 86400){
+		
+		if(Math.floor(diffBetWeenDays/3600) > 1 ){
+			finalResult = `Posted ${Math.floor(diffBetWeenDays/3600)} Hour's  ago`
+		}else{
+			finalResult = `Posted ${Math.floor(diffBetWeenDays/3600)} Hour  ago`
+		}
+	}
+	else if(diffBetWeenDays >= 86400 && diffBetWeenDays < 2592000){
+		if(Math.floor(diffBetWeenDays/86400) > 1){
+			finalResult = `Posted ${Math.floor(diffBetWeenDays/86400)} Day's  ago`
+		}else{
+			finalResult = `Posted ${Math.floor(diffBetWeenDays/86400)} Day  ago`
+		}
+	}
+	else if(diffBetWeenDays < 31104000){
+		
+		if(Math.floor(diffBetWeenDays/2592000) > 1){
+			finalResult = `Posted ${Math.floor(diffBetWeenDays/2592000)} Month's ago`
+		}else{
+			finalResult = `Posted ${Math.floor(diffBetWeenDays/2592000)} Month ago`
+		}
+	}
+	else if(diffBetWeenDays > 31104000){
+		if(Math.floor(diffBetWeenDays/31104000) > 1){
+			finalResult = `Posted on ${startTimeDate.getDate()} ${monthArray[startTimeDate.getMonth()]}, ${startTimeDate.getFullYear()}`
+		}else{
+			finalResult = `Posted ${Math.floor(diffBetWeenDays/31104000)} Year ago`
+		}
+	}
+	return finalResult ; 
+}
 export default function TimeLine() {
 	/*
 	const [data, setData] = useState(null);
@@ -25,38 +82,71 @@ export default function TimeLine() {
 	})
 	*/
 
-	const[advice,setAdvice] = useState("") ; 
-
+	const [TimeLine , setTimeLine] = useState(false) ; 
 	useEffect(() =>{
-		let url = `https://ap6566i.adviceslip.com/advice`
-
-		const fetchDate = async (urll) => {
+		const fetchDate = async (destination,limit) => {
 			try {
-				const response = await fetch(urll, {
+				const response = await fetch(`https://dummyapi.io/data/v1/${destination}?limit=${limit}`, {
 					method: 'get',
 					"Access-Control-Allow-Origin" : "*" , 
- 					headers:{
-  						'app-id' : "63641c4775177d7dd7dd4141" 
- 					}
+					 headers:{
+						  'app-id' : "63641c4775177d7dd7dd4141" 
+					 }
 				});
-				const json = await response.json() ; 
-				console.log(json);
-				setAdvice(json);
+				const result = await response.json() ; 
+				if(response.ok){
+					setTimeLine(result.data) ; 
+				}
+				console.log(result.data)
+				console.log(TimeLine); 
 			} catch (error) {
 				console.log("error",error) ;
 			}
-		} ; 
-		fetchDate(`https://dummyapi.io/data/v1/post?limit=5`) ; 
+		}
+		fetchDate("post",10) ; 
 	},[])
-
-
-
-
-
 return(
-	<p className="text-white text-2xl">
-		kugiyugiygfuyfg
-	</p>
+	<>
+			{
+				TimeLine ? 
+					<>
+					{
+						TimeLine.map((item)=>
+							<div className="flex flex-col mx-[5%] text-white">
+								<div className="flex items-center justify-between">
+									<div className="flex items-center">
+										<img className="w-profilePicture h-profilePicture rounded-full object-cover object-top border-[.2rem] border-lightBlueSky" src={item.owner.picture} />
+										<div className="flex flex-col">
+											<p>
+												<span>
+													{
+														item.owner.firstName
+													},
+												</span>
+												<span className="ml-[.3rem]">
+													{
+														item.owner.lastName
+													}
+												</span>
+											</p>
+											<span>
+												{
+													dateHandler(item.publishDate)
+												}
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						)
+					}
+					</>
+				:
+				<p>
+					nein
+				</p>
+			}
+	</>
 )
 }
 /*
