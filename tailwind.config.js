@@ -12,11 +12,20 @@ module.exports = {
       spacing: {
         'emojiPostSection': '2.25rem',
         'emojiMarginPostSection': '.4rem',
-        'profilePicture' : '3rem' ,
+        'profilePicture' : '2.8rem' ,
       },
       screens: {
+        //
+        'miniphone': '320px',
+
+        'phone': '470px',
+
+        'phablet': '470px',
+
         'tablet': '525px',
   
+        'minilaptop': '750px',
+
         'laptop': '1024px',
   
         'desktop': '1280px',
