@@ -107,8 +107,9 @@ export default function TimeLine() {
 	},[])
 return(
 					<>
-					{
-						TimeLine && TimeLine.map((item)=>
+						{
+							setTimeout(() => {
+								TimeLine && TimeLine.map((item)=>
 								<div className="flex flex-col mx-[5%] text-white mt-[1rem] bg-gray-500 rounded overflow-hidden">
 									<div className="w-full flex flex-col">
 										<div className="flex flex-col"> 
@@ -170,6 +171,7 @@ return(
 									</div>
 								</div>
 							)
+							}, 15000)
 						}
 					
 					</>
