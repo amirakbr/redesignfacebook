@@ -119,7 +119,7 @@ return(
 												<div className="w-full">
 												<div className="miniphone:flex-row flex flex-col miniphone:justify-start justify-center items-center">
 												<div className="w-profilePicture h-profilePicture overflow-hidden rounded-full border-[.15rem] border-lightBlueSky flex items-center justify-center">
-													<img className="max-w-[unset] w-profilePicture h-profilePicture rounded-full" src={item.owner.picture} />
+													<img className="max-w-[unset] w-profilePicture h-profilePicture rounded-full object-cover object-center" src={item.owner.picture} />
 												</div>
 												<div className="flex flex-col miniphone:ml-[1rem]">
 													<p className="mb-[.2rem] text-md text-center miniphone:text-start">
@@ -161,8 +161,8 @@ return(
 												</div>
 											</div>
 											</div>
-											<div className="w-full h-[13rem] miniphone:h-[15rem] tablet:h-[17.5rem] minilaptop:h-[20rem] flex">
-												<img className="w-full h-auto max-h-[auto]" src={
+											<div className="w-full h-[15rem] miniphone:h-[15rem] tablet:h-[17.5rem] minilaptop:h-[20rem] flex">
+												<img className="w-full h-auto max-h-[auto] object-cover object-center" src={
 													item.image
 												} />
 											</div>
