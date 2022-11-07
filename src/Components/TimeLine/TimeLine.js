@@ -103,11 +103,11 @@ export default function TimeLine() {
 				console.log("error",error) ;
 			}
 		}
-		fetchDate("post",Math.ceil(Math.random() * 10)) ; 
+		fetchDate("post",5)  ; 
 	},[])
 return(
 					<>
-					
+
 					{
 
 						TimeLine.map((item)=>
