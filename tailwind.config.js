@@ -19,7 +19,7 @@ module.exports = {
       },
       screens: {
         //
-        'miniphone': '320px',
+        'miniphone': '400px',
 
         'phone': '470px',
 
