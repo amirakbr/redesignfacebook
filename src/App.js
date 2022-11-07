@@ -4,7 +4,7 @@ import Post from "./Components/Post/Post";
 import TimeLine from "./Components/TimeLine/TimeLine";
 function App() {
   return (
-    <div className="container">
+    <div className="container mx-auto">
       <Header />
       <StoryLine />
       <Post />
