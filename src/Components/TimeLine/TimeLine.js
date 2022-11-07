@@ -107,72 +107,78 @@ export default function TimeLine() {
 	},[])
 return(
 					<>
-
 					{
-
-						TimeLine.map((item)=>
-							<div className="flex flex-col mx-[5%] text-white mt-[1rem] bg-gray-500 rounded overflow-hidden">
-								<div className="w-full flex flex-col">
-									<div className="flex flex-col"> 
-									<div className="flex flex-col p-[1rem]">
-										<div className="w-full">
-										<div className="miniphone:flex-row flex flex-col miniphone:justify-start justify-center items-center">
-										<div className="w-profilePicture h-profilePicture overflow-hidden rounded-full border-[.15rem] border-lightBlueSky flex items-center justify-center">
-											<img className="max-w-[unset] w-profilePicture h-profilePicture rounded-full" src={item.owner.picture} />
-										</div>
-										<div className="flex flex-col miniphone:ml-[1rem]">
-											<p className="mb-[.2rem] text-md text-center miniphone:text-start">
-												<span>
+						TimeLine ? 
+						<>
+							{
+							TimeLine.map((item)=>
+								<div className="flex flex-col mx-[5%] text-white mt-[1rem] bg-gray-500 rounded overflow-hidden">
+									<div className="w-full flex flex-col">
+										<div className="flex flex-col"> 
+										<div className="flex flex-col p-[1rem]">
+											<div className="w-full">
+											<div className="miniphone:flex-row flex flex-col miniphone:justify-start justify-center items-center">
+											<div className="w-profilePicture h-profilePicture overflow-hidden rounded-full border-[.15rem] border-lightBlueSky flex items-center justify-center">
+												<img className="max-w-[unset] w-profilePicture h-profilePicture rounded-full" src={item.owner.picture} />
+											</div>
+											<div className="flex flex-col miniphone:ml-[1rem]">
+												<p className="mb-[.2rem] text-md text-center miniphone:text-start">
+													<span>
+														{
+															item.owner.firstName
+														},
+													</span>
+													<span className="ml-[.3rem]">
+														{
+															item.owner.lastName
+														}
+													</span>
+												</p>
+												<span className="text-sm text-[#9f9fa1]">
 													{
-														item.owner.firstName
-													},
-												</span>
-												<span className="ml-[.3rem]">
-													{
-														item.owner.lastName
+														dateHandler(item.publishDate)
 													}
 												</span>
-											</p>
-											<span className="text-sm text-[#9f9fa1]">
+											</div>
+											</div>
+										</div>
+										<div className="mt-[.8rem] flex flex-col miniphone:items-start items-center">
+											<p className="miniphone:ml-[3.85rem] break-all">
 												{
-													dateHandler(item.publishDate)
+													item.text
 												}
-											</span>
+											</p>
+											<div className="miniphone:ml-[3.85rem] miniphone:justify-start justify-center flex my-[2rem] flex-wrap">
+												{
+													item.tags.map((tag)=>
+														<p className="mr-[.3rem] mt-[.3rem] px-4 py-1 bg-black rounded-[.3rem] break-all">
+															#{
+																tag
+															}
+														</p>
+													)
+												}
+											</div>
 										</div>
 										</div>
-									</div>
-									<div className="mt-[.8rem] flex flex-col miniphone:items-start items-center">
-										<p className="miniphone:ml-[3.85rem] break-all">
-											{
-												item.text
-											}
-										</p>
-										<div className="miniphone:ml-[3.85rem] miniphone:justify-start justify-center flex my-[2rem] flex-wrap">
-											{
-												item.tags.map((tag)=>
-													<p className="mr-[.3rem] mt-[.3rem] px-4 py-1 bg-black rounded-[.3rem] break-all">
-														#{
-															tag
-														}
-													</p>
-												)
-											}
+										<div className="w-full h-[13rem] miniphone:h-[15rem] tablet:h-[17.5rem] minilaptop:h-[20rem] flex">
+											<img className="w-full h-auto max-h-[auto]" src={
+												item.image
+											} />
 										</div>
-									</div>
-									</div>
-									<div className="w-full h-[13rem] miniphone:h-[15rem] tablet:h-[17.5rem] minilaptop:h-[20rem] flex">
-										<img className="w-full h-auto max-h-[auto]" src={
-											item.image
-										} />
-									</div>
-									</div>
-									<div className="flex p-[1rem] bg-white">
-
+										</div>
+										<div className="flex p-[1rem] bg-white">
+	
+										</div>
 									</div>
 								</div>
-							</div>
-						)
+							)
+						}
+						</>
+						 :
+						null
 					}
+					
 					</>
 
 )
