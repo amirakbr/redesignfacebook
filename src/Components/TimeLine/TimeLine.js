@@ -103,7 +103,7 @@ export default function TimeLine() {
 				console.log("error",error) ;
 			}
 		}
-		fetchDate("post",5)  ; 
+		fetchDate("post",4)  ; 
 	},[])
 return(
 					<>
