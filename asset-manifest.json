@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/redesignfacebook/static/css/main.7f4dd3fd.css",
+    "main.js": "/redesignfacebook/static/js/main.4fb2d57e.js",
+    "static/js/787.103c5e73.chunk.js": "/redesignfacebook/static/js/787.103c5e73.chunk.js",
+    "static/media/schaduelSvg.svg": "/redesignfacebook/static/media/schaduelSvg.1f2901cefc627d342d260b4ae3e7e1a5.svg",
+    "static/media/gifSvg.svg": "/redesignfacebook/static/media/gifSvg.debe67a71a96507693851e37e5e616b4.svg",
+    "static/media/pollSvg.svg": "/redesignfacebook/static/media/pollSvg.94b150d5eeee8f1de9938e8143aae279.svg",
+    "static/media/mediaSvg.svg": "/redesignfacebook/static/media/mediaSvg.0417c0c40800a7561c73d50810e69d6c.svg",
+    "static/media/magnifier.svg": "/redesignfacebook/static/media/magnifier.42b26d482030288c94827f85ee0db11f.svg",
+    "static/media/emojiSvg.svg": "/redesignfacebook/static/media/emojiSvg.c3c991635c6d0148ac6d8d4a4fe56e87.svg",
+    "static/media/locationSvg.svg": "/redesignfacebook/static/media/locationSvg.fed732b5b1d4a2240d4084027952d57a.svg",
+    "index.html": "/redesignfacebook/index.html",
+    "main.7f4dd3fd.css.map": "/redesignfacebook/static/css/main.7f4dd3fd.css.map",
+    "main.4fb2d57e.js.map": "/redesignfacebook/static/js/main.4fb2d57e.js.map",
+    "787.103c5e73.chunk.js.map": "/redesignfacebook/static/js/787.103c5e73.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7f4dd3fd.css",
+    "static/js/main.4fb2d57e.js"
+  ]
+}
