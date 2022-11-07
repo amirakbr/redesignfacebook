@@ -106,11 +106,10 @@ export default function TimeLine() {
 		fetchDate("post",Math.ceil(Math.random() * 10)) ; 
 	},[])
 return(
-	<>
-			{
-				TimeLine ? 
 					<>
+					
 					{
+
 						TimeLine.map((item)=>
 							<div className="flex flex-col mx-[5%] text-white mt-[1rem] bg-gray-500 rounded overflow-hidden">
 								<div className="w-full flex flex-col">
@@ -175,12 +174,7 @@ return(
 						)
 					}
 					</>
-				:
-				<p>
-					nein
-				</p>
-			}
-	</>
+
 )
 }
 /*
