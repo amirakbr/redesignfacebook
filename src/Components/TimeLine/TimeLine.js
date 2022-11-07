@@ -108,11 +108,11 @@ export default function TimeLine() {
 return(
 					<>
 						{
-							TimeLine && <p>
+							TimeLine && <div>
 								{
-									TimeLine.length
+									TimeLine.map((item)=> <p>{item.id}</p>)
 								}
-							</p>
+							</div>
 						}
 					
 					</>
