@@ -142,13 +142,13 @@ return(
 												</div>
 												</div>
 											</div>
-											<div className="mt-[.8rem] flex flex-col miniphone:items-start items-center">
+											<div className="mt-[.6rem] flex flex-col miniphone:items-start items-center">
 												<p className="miniphone:ml-[3.85rem] break-all">
 													{
 														item.text
 													}
 												</p>
-												<div className="miniphone:ml-[3.85rem] miniphone:justify-start justify-center flex my-[2rem] flex-wrap">
+												<div className="miniphone:ml-[3.85rem] miniphone:justify-start justify-center flex m-[.8rem_0_.3rem_0] flex-wrap">
 													{
 														item.tags.map((tag)=>
 															<p className="mr-[.3rem] mt-[.3rem] px-4 py-1 bg-black rounded-[.3rem] break-all">
