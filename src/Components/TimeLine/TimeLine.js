@@ -151,7 +151,7 @@ return(
 												<div className="miniphone:ml-[3.85rem] miniphone:justify-start justify-center flex m-[.8rem_0_.3rem_0] flex-wrap">
 													{
 														item.tags.map((tag)=>
-															<p className="mr-[.3rem] mt-[.3rem] px-4 py-1 bg-black rounded-[.3rem] break-all">
+															<p className="mr-[.45rem] mt-[.45rem] px-4 py-1 bg-black rounded-[.3rem] break-all hover:bg-white hover:text-black transation-all duration-[.3s] font-[500] hover:shadow-[0rem_0rem_0.4rem_-0.06rem_black]">
 																#{
 																	tag
 																}
