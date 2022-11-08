@@ -15,7 +15,7 @@ module.exports = {
       spacing: {
         'emojiPostSection': '2.25rem',
         'emojiMarginPostSection': '.4rem',
-        'profilePicture' : '2.8rem' ,
+        'profilePicture' : '3rem' ,
       },
       screens: {
         //
