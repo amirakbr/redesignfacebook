@@ -143,7 +143,7 @@ return(
 												</div>
 											</div>
 											<div className="mt-[.6rem] flex flex-col miniphone:items-start items-center">
-												<p className="miniphone:ml-[3.85rem] break-all">
+												<p className="miniphone:ml-[3.85rem] text-center miniphone:text-start break-all">
 													{
 														item.text
 													}
