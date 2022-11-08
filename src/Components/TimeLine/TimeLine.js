@@ -161,7 +161,7 @@ return(
 												</div>
 											</div>
 											</div>
-											<div className="w-full h-[15rem] miniphone:h-[15rem] tablet:h-[17.5rem] minilaptop:h-[20rem] flex">
+											<div className="w-full h-[20rem] miniphone:h-[25rem] tablet:h-[28rem] minilaptop:h-[32rem] flex">
 												<img className="w-full h-auto max-h-[auto] object-cover object-center" src={
 													item.image
 												} />
