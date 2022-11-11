@@ -1,8 +1,15 @@
 {
   "files": {
-    "main.css": "/redesignfacebook/static/css/main.d0a5535c.css",
-    "main.js": "/redesignfacebook/static/js/main.713d698c.js",
+    "main.css": "/redesignfacebook/static/css/main.a6cf9f26.css",
+    "main.js": "/redesignfacebook/static/js/main.d29be72b.js",
     "static/js/787.103c5e73.chunk.js": "/redesignfacebook/static/js/787.103c5e73.chunk.js",
+    "static/media/care.svg": "/redesignfacebook/static/media/care.6c7aec7b743c15bbaefb2561610b3c28.svg",
+    "static/media/sad.svg": "/redesignfacebook/static/media/sad.24cbe41c291ebdd07d6a3ee3a088ac5d.svg",
+    "static/media/happy.svg": "/redesignfacebook/static/media/happy.b5728a78db6de520e9dc8062aa5af4e5.svg",
+    "static/media/wow.svg": "/redesignfacebook/static/media/wow.5fe855d89232c5711649ef8aecedb457.svg",
+    "static/media/angry.svg": "/redesignfacebook/static/media/angry.3857aeb5ed0619244208c653f5710ac5.svg",
+    "static/media/like.svg": "/redesignfacebook/static/media/like.ed0a684262971375a435246953b3aad1.svg",
+    "static/media/FillHeart.svg": "/redesignfacebook/static/media/FillHeart.46102f7e4de8a0c5ffd064a37ba9a32d.svg",
     "static/media/schaduelSvg.svg": "/redesignfacebook/static/media/schaduelSvg.1f2901cefc627d342d260b4ae3e7e1a5.svg",
     "static/media/gifSvg.svg": "/redesignfacebook/static/media/gifSvg.debe67a71a96507693851e37e5e616b4.svg",
     "static/media/pollSvg.svg": "/redesignfacebook/static/media/pollSvg.94b150d5eeee8f1de9938e8143aae279.svg",
@@ -11,12 +18,15 @@
     "static/media/emojiSvg.svg": "/redesignfacebook/static/media/emojiSvg.c3c991635c6d0148ac6d8d4a4fe56e87.svg",
     "static/media/locationSvg.svg": "/redesignfacebook/static/media/locationSvg.fed732b5b1d4a2240d4084027952d57a.svg",
     "index.html": "/redesignfacebook/index.html",
-    "main.d0a5535c.css.map": "/redesignfacebook/static/css/main.d0a5535c.css.map",
-    "main.713d698c.js.map": "/redesignfacebook/static/js/main.713d698c.js.map",
+    "static/media/Comment.svg": "/redesignfacebook/static/media/Comment.43bac8be424c4f57f2074a0771cbf67a.svg",
+    "static/media/Share.svg": "/redesignfacebook/static/media/Share.17f24d49760b75eaeae079eb3b6ec1e1.svg",
+    "static/media/EmptyHeart.svg": "/redesignfacebook/static/media/EmptyHeart.5fd7b21d640e9c8ce1d932fa0a1b9730.svg",
+    "main.a6cf9f26.css.map": "/redesignfacebook/static/css/main.a6cf9f26.css.map",
+    "main.d29be72b.js.map": "/redesignfacebook/static/js/main.d29be72b.js.map",
     "787.103c5e73.chunk.js.map": "/redesignfacebook/static/js/787.103c5e73.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d0a5535c.css",
-    "static/js/main.713d698c.js"
+    "static/css/main.a6cf9f26.css",
+    "static/js/main.d29be72b.js"
   ]
 }
