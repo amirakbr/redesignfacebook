@@ -79,11 +79,11 @@ return(
 								{
 									TimeLine.map((item , index)=>
 									index === TimeLine.length - 1 ? <>
-										<HandlerPost item={item} />
+										<HandlerPost datakey="end-post" item={item} />
 									</>
 									:
 									<>
-										<HandlerPost item={item}/>
+										<HandlerPost datakey="normalpost" item={item}/>
 									</>
 									)
 								}

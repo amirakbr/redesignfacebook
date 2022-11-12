@@ -28,10 +28,10 @@ let emojiesArray = [<AngrySvgComponent classes={"w-emojiPost z-0 relative scale-
 <WowSvgComponent classes={"w-emojiPost z-0 relative scale-100 hover:z-10 hover:scale-[1.15] transition-all duration-[.2s] -ml-emojiPostSpace"} />] ;
 
 
-export default function HandlerPost({item}) {
+export default function HandlerPost({item , datakey}) {
      return(
           <>
-          <div className="flex flex-col mx-[5%] text-white mt-[1rem] bg-[#1a1c20] rounded overflow-hidden">
+          <div date--post={datakey} className="flex flex-col mx-[5%] text-white mt-[1rem] bg-[#1a1c20] rounded overflow-hidden">
 										<div className="w-full flex flex-col">
 											<div className="flex flex-col"> 
 											<div className="flex flex-col p-[1rem]">
