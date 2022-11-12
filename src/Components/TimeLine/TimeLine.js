@@ -128,7 +128,7 @@ export default function TimeLine() {
 				console.log("error",error) ;
 			}
 		}
-		fetchDate("post",4)  ; 
+		fetchDate("post",10)  ; 
 	},[])
 return(
 					<>
@@ -177,7 +177,7 @@ return(
 												<div className="miniphone:ml-[3.85rem] miniphone:justify-start justify-center flex m-[.8rem_0_.3rem_0] flex-wrap">
 													{
 														item.tags.map((tag)=>
-															<p className="mr-[.45rem] mt-[.45rem] px-4 py-1 bg-[#2d343e] rounded-[.3rem] break-all hover:bg-[#848d9b] transation-all duration-[.3s] font-[500] hover:shadow-[0rem_0rem_.4rem_.01rem_#848d9b] shadow-[inset_0rem_0rem_0.3rem_#2d343e] hover:shadow-[inset_0rem_0rem_0.3rem_transparent]">
+															<p className="mr-[.45rem] mt-[.45rem] px-4 py-1 bg-[#2d343e] rounded-[.3rem] break-all hover:bg-[#848d9b] transation-all duration-[.3s] font-[500] hover:shadow-[0rem_0rem_.4rem_.01rem_#848d9b]">
 																#{
 																	tag
 																}
