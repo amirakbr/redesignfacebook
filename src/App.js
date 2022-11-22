@@ -10,6 +10,7 @@ function App() {
       <StoryLine />
       <Post />
       <TimeLine />
+      <p>salam</p>
       <FixedBottomMenu />
     </div>
   );
